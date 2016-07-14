@@ -1,11 +1,11 @@
 
 
-NAME = ArticleExample
+NAME = vtkDiscreteMarchingCubes_extension
 
-BIBTEXDATABSENAME = InsightJournal
+BIBTEXDATABSENAME = ${NAME}
 
 
-all: ps pdf dvi
+all: pdf
 
 
 ps: ${NAME}.ps
@@ -25,8 +25,11 @@ ${NAME}.ps: ${NAME}.dvi
 	dvips -o ${NAME}.ps ${NAME}.dvi
 
 
-${NAME}.pdf: ${NAME}.ps
-	ps2pdf ${NAME}.ps
+${NAME}.pdf: ${NAME}.tex  ${BIBTEXDATABSENAME}.bib
+	pdflatex -shell-escape ${NAME}.tex
+	bibtex ${NAME}
+	pdflatex ${NAME}.tex
+	pdflatex ${NAME}.tex
 
 
 ${NAME}.bbl: ${BIBTEXDATABSENAME}.bib ${NAME}.aux
