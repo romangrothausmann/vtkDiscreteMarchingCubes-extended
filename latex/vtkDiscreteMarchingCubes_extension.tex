@@ -184,11 +184,12 @@ in the bottom left the capping is removed.
 \end{figure}
 
 
+
 \section{Implementation}
 \label{sec:impl}
 
 
-Below the partial listing of the patch that contains the essential changes:
+Below the partial listing of the patch that contains the essential changes to \code{vtkDiscreteMarchingCubes.cxx}:
 
 \lstinputlisting[language=diff,
   linerange={% http://tex.stackexchange.com/questions/34323/using-lstinputlisting-to-include-a-file-but-only-certain-lines-or-line-ranges#34325
@@ -198,6 +199,19 @@ Below the partial listing of the patch that contains the essential changes:
     %% ,100-112
   }
 ]{diffs/vtkDiscreteMarchingCubes.cxx_b02cbff0f1..bb8e3caf71.gitdiff}% VTK$ git diff b02cbff0f1 bb8e3caf71  Filters/General/vtkDiscreteMarchingCubes.cxx > $@
+
+
+
+\section{Testing}
+\label{sec:test}
+
+
+A test based on \code{TestDiscreteMarchingCube.py} was created to monitor the newly added functionality:
+
+\lstinputlisting[language=diff,
+]{diffs/TestDiscreteMarchingCubesAdjacentScalars.py_f4c02685b4..5b5e5add65.gitdiff}% VTK$ git diff f4c02685b4 5b5e5add65  Filters/General/Testing/Python/TestDiscreteMarchingCubesAdjacentScalars.py > $@
+
+
 
 %\pagebreak
 
