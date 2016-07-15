@@ -1,0 +1,16 @@
+*.pdf
+*.pdf_tex
+tot.bib
+
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.lof
+*.toc
+*.brf
+*.sbb
+*.fff
+*.ttt
+*.lot
