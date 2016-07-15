@@ -212,6 +212,19 @@ A test based on \code{TestDiscreteMarchingCube.py} was created to monitor the ne
 
 
 
+\section{Conclusions}
+
+The extension to \code{vtkDiscreteMarchingCubes} presented here allows to selectively remove the surface between adjacent labels.
+This is particularly useful when objects of a binary image were separated at constrictions using the common approach of a watershed filter on the distance map.
+Using \code{vtkDiscreteMarchingCubes} then to create surface meshes of the resulting label image even allows smoothing before any capping removal, which avoids unsmoothed or distorted boundaries.
+
+
+
+\section{Acknowledgment}
+
+Thanks go to all who gave feedback on this at GitLab, GitHub and the mailinglist.
+
+
 %\pagebreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
