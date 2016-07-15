@@ -146,11 +146,7 @@ For example looking at label 19 and 21 (extracted by a simple threshold on the c
 
 An additional threshold on the point scalars then removes the capping at the separation, see Fig.~\ref{fig:dmcCOt21t19}.
 
-An advantage of this kind of capping removal is that it is even possible after the mesh was modified by other filters, e.g. smoothed by \code{vtkWindowedSincPolyDataFilter}. However, in most cases the resulting meshes are not connected on the open border edges any more, i.e. there will be gaps between them. The \code{vtkCoplanarSurfaceExtractor}\citep{Grothausmann2014_r} can be used to avoid such gaps.
-
-
-
-\begin{figure}
+\begin{figure}[p]
 \center
 \includegraphics[width=.48\textwidth]{images/vtkDiscreteMarchingCubes_extension_01}
 \hfill
@@ -164,7 +160,7 @@ right: Result only displaying those regions of the meshes that were adjacent to 
 \label{fig:dmcCO}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[p]
 \center
 \includegraphics[width=.48\textwidth]{images/vtkDiscreteMarchingCubes_extension_03}
 \hfill
@@ -182,6 +178,9 @@ in the bottom left the capping is removed.
 }
 \label{fig:dmcCOt21t19}
 \end{figure}
+
+
+An advantage of this kind of capping removal is that it is even possible after the mesh was modified by other filters, e.g. smoothed by \code{vtkWindowedSincPolyDataFilter}. However, in most cases the resulting meshes are not connected on the open border edges any more, i.e. there will be gaps between them. The \code{vtkCoplanarSurfaceExtractor}\citep{Grothausmann2014_r} can be used to avoid such gaps.
 
 
 
@@ -202,7 +201,7 @@ Below the partial listing of the patch that contains the essential changes to \c
 
 
 
-\section{Testing}
+\section{Testing (usage example)}
 \label{sec:test}
 
 
