@@ -16,6 +16,16 @@
 %\usepackage[hyphens]{url}%does not work with hyperref
 
 
+\usepackage{listings}% https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}% http://tex.stackexchange.com/questions/33685/set-the-font-family-for-lstlisting
+\lstdefinelanguage{diff}{% http://tex.stackexchange.com/questions/50176/highlighting-a-diff-file#50263
+  morecomment=[f][\color{blue}]{@@},     % group identifier
+  morecomment=[f][\color{red}]-,         % deleted lines 
+  morecomment=[f][\color{green}]+,       % added lines
+  morecomment=[f][\color{magenta}]{---}, % Diff header lines (must appear after +,-)
+  morecomment=[f][\color{magenta}]{+++},
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -173,6 +183,14 @@ in the bottom left the capping is removed.
 \label{fig:dmcCOt21t19}
 \end{figure}
 
+
+\section{Implementation}
+\label{sec:impl}
+
+\lstinputlisting[language=diff,
+  %% firstline=2,
+  %% lastline=5
+]{diffs/vtkDiscreteMarchingCubes.cxx_b02cbff0f1..bb8e3caf71.gitdiff}% VTK$ git diff b02cbff0f1 bb8e3caf71  Filters/General/vtkDiscreteMarchingCubes.cxx > $@
 
 %\pagebreak
 
