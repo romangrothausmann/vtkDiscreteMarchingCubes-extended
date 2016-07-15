@@ -187,9 +187,16 @@ in the bottom left the capping is removed.
 \section{Implementation}
 \label{sec:impl}
 
+
+Below the partial listing of the patch that contains the essential changes:
+
 \lstinputlisting[language=diff,
-  %% firstline=2,
-  %% lastline=5
+  linerange={% http://tex.stackexchange.com/questions/34323/using-lstinputlisting-to-include-a-file-but-only-certain-lines-or-line-ranges#34325
+    1-4
+    ,36-58
+    %% ,67-83
+    %% ,100-112
+  }
 ]{diffs/vtkDiscreteMarchingCubes.cxx_b02cbff0f1..bb8e3caf71.gitdiff}% VTK$ git diff b02cbff0f1 bb8e3caf71  Filters/General/vtkDiscreteMarchingCubes.cxx > $@
 
 %\pagebreak
