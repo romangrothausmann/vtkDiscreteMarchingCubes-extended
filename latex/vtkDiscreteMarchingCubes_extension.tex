@@ -130,7 +130,7 @@ The extension is based on the code of \code{vtkDiscreteMarchingCubes} of VTK-6.3
 \itkcaption[]{
 Segmentation with touching labels\\
 \footnotesize
-Slices of a label image that separates a segmentation at constrictions and also contains a background label (0, rendered fully transparent). The cursor is on label 21 (light purple) which is adjacent to label 19 (dark pink). This is a screen-shot of ITKSnap\citep{itksnap,Yushkevich2006}.
+Slices of a label image that separates a segmentation at constrictions and also contains a background label (0, rendered fully transparent). The cursor is on label 21 (light purple) which is adjacent to label 19 (dark pink). This is a screen-shot of ITKSnap\citep{itksnap}.
 }
 \label{fig:labelimage}
 \end{figure}
@@ -188,7 +188,7 @@ Such gaps can be avoided with \code{vtkCoplanarSurfaceExtractor}\citep{Grothausm
 \label{sec:impl}
 
 
-Below the partial listing of the patch that contains the essential changes to \code{vtkDiscreteMarchingCubes.cxx}:
+Below the partial listing of the patch that contains the essential changes:
 
 \lstinputlisting[language=diff,
   linerange={% http://tex.stackexchange.com/questions/34323/using-lstinputlisting-to-include-a-file-but-only-certain-lines-or-line-ranges#34325
@@ -220,7 +220,7 @@ Using \code{vtkDiscreteMarchingCubes} then to create surface meshes of the resul
 
 
 
-\section{Acknowledgment}
+\section{Acknowledgement}
 
 Thanks go to all who gave feedback on this at GitLab, GitHub and the mailing-list.
 
