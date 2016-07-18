@@ -76,7 +76,7 @@
 
 % Define command to make reference to on-line Doxygen documentation
 \newcommand{\doxygen}[1]{
-\href{http://www.itk.org/Doxygen/html/classitk_1_1#1.html}{\code{itk::#1}}}  
+\href{http://www.vtk.org/doc/nightly/html/class#1.html}{\code{vtk::#1}}}  
 
 % Define command to make reference to on-line Doxygen documentation
 \newcommand{\subdoxygen}[2]{
