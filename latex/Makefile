@@ -41,3 +41,6 @@ clean:
 	-rm ${NAME}.dvi ${NAME}.ps ${NAME}.pdf ${NAME}.aux ${NAME}.log ${NAME}.bbl ${NAME}.blg ${NAME}.toc ${NAME}.out  ${NAME}.brf
 	-rm tot.bib
 
+
+vtkDiscreteMarchingCubes_extension_01+02.jpg : images/vtkDiscreteMarchingCubes_extension_01.png  images/vtkDiscreteMarchingCubes_extension_02.png
+	montage $^ -geometry 1024x+0+0 -tile 1x2 -quality 93  $@
